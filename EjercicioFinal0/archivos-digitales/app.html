@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Archivos Digitales</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="encabezado">
+    <h1>Archivos Digitales</h1>
+    <h3 id="nombreAlumno">Luis Enrique Chavez Dominguez</h3>
+    <span id="correoUsuario"></span>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <div class="contenedor">
+
+    <!-- Barra lateral con las carpetas -->
+    <div class="lateral">
+      <h3>Carpetas</h3>
+      <button onclick="cambiarCarpeta('Todos')">Todos</button>
+      <button onclick="cambiarCarpeta('Documentos Privados')">Documentos Privados</button>
+      <button onclick="cambiarCarpeta('Cursos de Actualización')">Cursos de Actualización</button>
+      <button onclick="cambiarCarpeta('Documentos Académicos')">Documentos Académicos</button>
+      <button onclick="cambiarCarpeta('Documentos Familiares')">Documentos Familiares</button>
+    </div>
+
+    <!-- Menú principal -->
+    <div class="principal">
+      <h2>Menú Principal</h2>
+
+      <div class="caja">
+        <h3 id="tituloFormulario">Subir documento</h3>
+        <label>Título:</label><br>
+        <input type="text" id="titulo"><br><br>
+
+        <label>Tipo de documento:</label><br>
+        <select id="tipo">
+          <option>INE</option>
+          <option>CURP</option>
+          <option>Acta de nacimiento</option>
+          <option>Curso</option>
+          <option>CV</option>
+          <option>Título</option>
+          <option>Cédula profesional</option>
+          <option>Recibo de luz</option>
+          <option>Teléfono</option>
+        </select><br><br>
+
+        <label>Carpeta:</label><br>
+        <select id="carpeta">
+          <option>Documentos Privados</option>
+          <option>Cursos de Actualización</option>
+          <option>Documentos Académicos</option>
+          <option>Documentos Familiares</option>
+        </select><br><br>
+
+        <label>Archivo:</label><br>
+        <input type="file" id="archivo"><br><br>
+
+        <button onclick="guardar()">Guardar</button>
+        <button onclick="cancelarEdicion()">Cancelar</button>
+        <p id="mensaje"></p>
+      </div>
+
+      <h3 id="carpetaActual">Todos</h3>
+      <input type="text" id="buscador" placeholder="Buscar archivos..." oninput="mostrarDocumentos()">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Tipo</th>
+            <th>Carpeta</th>
+            <th>Archivo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+PASOS
+1. En Supabase crea un proyecto nuevo.
+2. SQL Editor: abre sql/tabla.sql, cambia "tu_nombre" por tu nombre (ej: juan_perez) y ejecútalo.
+3. Authentication > Providers > Email: desactiva "Confirm email" (para no tener que confirmar correo).
+4. Settings > API: copia Project URL y anon key en js/config.js (SUPABASE_URL y SUPABASE_KEY).
+5. En js/app.js cambia TABLA (tu nombre, igual que en el SQL) y NOMBRE_ALUMNO.
+6. En index.html y app.html puedes cambiar "Nombre Completo del Alumno" por tu nombre.
+7. Abre la carpeta en Visual Studio Code y ejecuta index.html con Live Server.

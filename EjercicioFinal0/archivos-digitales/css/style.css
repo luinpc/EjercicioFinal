@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.encabezado {
+  border-bottom: 2px solid black;
+  margin-bottom: 15px;
+}
+
+.contenedor {
+  display: flex;
+}
+
+.lateral {
+  width: 220px;
+  border-right: 1px solid gray;
+  padding-right: 10px;
+}
+
+.lateral button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.principal {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.caja {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 400px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 5px;
+  text-align: left;
+}
+
+#buscador {
+  width: 250px;
+}
